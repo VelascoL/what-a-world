@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="fj-reader">
+  <a class="fj-back" href="{{ '/' | relative_url }}">← Back to the collection</a>
+  {% if page.place %}<div class="fj-meta">{{ page.place | escape }}</div>{% endif %}
+  <h1>{{ page.title | escape }}</h1>
+  {% if page.sample %}<p class="fj-sample-label">Fictional sample · Design demonstration</p>{% endif %}
+  <div class="story-body">{{ content }}</div>
+  <p class="fj-attribution">{% if page.sample %}A fictional account for this design preview{% else %}{{ page.contributor | default: 'Anonymous' | escape }}{% endif %}</p>
+  <div class="fj-reader-bottom">
+    {% assign ordered_stories = site.stories | sort: 'order' %}
+    {% assign next_story = ordered_stories.first %}
+    {% for story in ordered_stories %}
+      {% if story.url == page.url %}
+        {% unless forloop.last %}
+          {% assign next_story = ordered_stories[forloop.index] %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    {% if ordered_stories.size > 1 %}<a class="fj-read" href="{{ next_story.url | relative_url }}">Another encounter →</a>{% endif %}
+    <a class="fj-read" href="{{ '/share/' | relative_url }}">Share a moment of your own ↗</a>
+  </div>
+</article>
+
