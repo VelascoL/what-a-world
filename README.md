@@ -1,0 +1,110 @@
+# What a world, huh?
+
+A field journal for nature stories, prepared for GitHub Pages. The design uses
+the supplied flyer artwork, warm paper, and green type. Readers browse excerpts,
+open individual story pages, or choose a random encounter. There are no feeling
+categories. Each story has its own shareable address.
+
+## Publish on GitHub
+
+1. Create a **new public repository** named **what-a-world** under **VelascoL**.
+   Keep the academic website's repository separate. You can initialize the new
+   repository with a README so its `main` branch exists.
+2. Unzip the download. Open the `what-a-world` folder and upload **its contents**
+   to the repository using **Add file → Upload files**. Drag in the folders too.
+   `index.html`, `_config.yml`, `_layouts`, `_stories`, and `assets` must appear
+   at the repository root, not inside a second `what-a-world` folder.
+3. Edit `_config.yml` and put the public URL of your existing submission form
+   in `submission_url`. Leave `submission_embed_url` empty unless your form
+   provider supplies a supported iframe embed URL.
+4. Review the six files in `_stories`. They are fictional design samples, clearly
+   labeled on the website. **Remove the sample files before your public launch**
+   and add accounts you have permission to publish. With no stories, the home
+   page shows a simple invitation to contribute.
+5. Open **Settings → Pages**. Under **Build and deployment**, choose
+   **Deploy from a branch**, then **main** and **/(root)**. Click **Save**.
+6. GitHub builds the website. Check the **Actions** tab for the Pages build and
+   deployment result. Once it succeeds, your address should be:
+   **https://velascol.github.io/what-a-world/**
+
+The package is configured for that repository name and account. If you choose
+another repository name, update `baseurl` to `/<your-repository-name>` in
+`_config.yml`. For another account, update `url` too. A custom domain can be
+connected later; at that point `url` and `baseurl` should match the final address.
+
+## Add a story
+
+Copy `examples/story-template.md` into `_stories` with a short filename such as
+`first-cicada.md`. You can also use **Add file → Create new file** on GitHub and
+enter `_stories/first-cicada.md` as the filename.
+
+```markdown
+---
+title: "The first cicada"
+contributor: "Anonymous"
+place: "An ordinary afternoon"
+order: 1
+sample: false
+---
+
+The first paragraph appears as the excerpt on the collection page.
+
+The rest of the account goes here. Leave a blank line between paragraphs.
+```
+
+- Use the contributor's chosen public name, or `Anonymous`.
+- `place` is optional and can be a broad setting rather than a precise location.
+- Lower `order` numbers appear earlier. The first entry receives more space.
+- Keep `sample: false` for real accounts. This flag labels examples; it is not
+  a publication-permission or privacy control.
+- Commit the file. GitHub rebuilds the site automatically.
+
+Everything committed to a public repository is public, including its history.
+Keep emails, submission exports, unpublished drafts, and permission records in
+your private form account. Add only the approved public version to `_stories`.
+
+## How submissions work
+
+GitHub Pages displays the journal. The existing form service collects accounts.
+The Share page links to that form; optionally it can display a supported embed.
+Submissions do not automatically publish. You review them and add approved
+accounts as Markdown files.
+
+When `submission_url` is empty, the Share page says the form is coming soon and
+does not show a nonworking submit button. This package does not invent a form
+destination or copy contact information into public files.
+
+## Local preview (optional)
+
+You do **not** need Ruby or Jekyll installed to use the GitHub upload steps above.
+For local development with a compatible Ruby/Bundler installation:
+
+```sh
+bundle install
+bundle exec jekyll serve
+```
+
+Open the address Jekyll prints, including `/what-a-world/`.
+
+## Files
+
+- `_config.yml`: site address and form URL.
+- `_stories/`: approved public stories (currently fictional samples).
+- `_layouts/`: shared page structure and story layout.
+- `assets/site.css`: the field-journal design.
+- `assets/site.js`: random-story navigation.
+- `index.html`, `about.html`, `share.html`: the main pages.
+- `examples/story-template.md`: a copyable story template, excluded from the site.
+
+## Validation status
+
+Configuration and story metadata were parsed locally. The file structure and
+relative paths were checked. A full Jekyll build and browser inspection have
+not been run in this environment. GitHub's initial Pages build is the remaining
+deployment check. This package has not been uploaded or published to GitHub.
+
+## Documentation
+
+- [GitHub Pages publishing settings](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+- [Jekyll collections](https://jekyllrb.com/docs/collections/)
+

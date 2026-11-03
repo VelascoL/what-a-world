@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<section class="fj-hero">
+  <div>
+    <div class="fj-kicker">A shared field journal</div>
+    <h1>Encounters with<br>the natural world.</h1>
+    <p>Awe, fear, sadness, delight—all of it belongs here.</p>
+  </div>
+  <div class="fj-art" aria-hidden="true"><img src="{{ '/assets/nature-flyer.jpg' | relative_url }}" alt="" width="853" height="1103"></div>
+</section>
+{% assign ordered_stories = site.stories | sort: 'order' %}
+<div class="fj-browsebar">
+  <span class="fj-kicker">From the collection</span>
+  {% if ordered_stories.size > 0 %}<button class="fj-random" type="button" data-random hidden>Take me somewhere ↗</button>{% endif %}
+</div>
+{% assign samples = site.stories | where: 'sample', true %}
+{% if samples.size > 0 %}<p class="fj-sample-notice">The entries marked “Fictional sample” illustrate the journal’s design.</p>{% endif %}
+<div class="fj-stories">
+  {% for story in ordered_stories %}
+  <article class="fj-entry">
+    {% if story.place %}<div class="fj-meta">{{ story.place | escape }}</div>{% endif %}
+    <h2><a href="{{ story.url | relative_url }}" data-story-link>{{ story.title | escape }}</a></h2>
+    {% if story.sample %}<div class="fj-sample-label">Fictional sample</div>{% endif %}
+    <div class="fj-excerpt">{{ story.excerpt }}</div>
+    <a class="fj-read" href="{{ story.url | relative_url }}">Read the story ↗</a>
+  </article>
+  {% else %}
+  <div class="fj-empty">
+    <h2>The journal is just beginning.</h2>
+    <p>We’re collecting our first encounters with the natural world. There’s room for yours.</p>
+    <a class="fj-read" href="{{ '/share/' | relative_url }}">Share your story ↗</a>
+  </div>
+  {% endfor %}
+</div>
+

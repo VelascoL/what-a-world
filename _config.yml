@@ -1,0 +1,36 @@
+title: "What a world, huh?"
+description: "A shared field journal of encounters with the natural world."
+url: "https://velascol.github.io"
+baseurl: "/what-a-world"
+
+# Paste your public submission-form link between these quotes.
+submission_url: ""
+# Optional: a provider-supported iframe embed URL (not every form supports one).
+submission_embed_url: ""
+
+markdown: kramdown
+permalink: pretty
+collections:
+  stories:
+    output: true
+    permalink: /stories/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: stories
+    values:
+      layout: story
+      contributor: Anonymous
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - examples
+  - scripts
+

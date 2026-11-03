@@ -1,0 +1,21 @@
+---
+title: Share your story
+permalink: /share/
+---
+<section class="fj-intake">
+  <a class="fj-back" href="{{ '/' | relative_url }}">← Back to the collection</a>
+  <div class="fj-kicker">Add a page to the journal</div>
+  <h1>Tell us about a time you were moved by Nature.</h1>
+  <p class="fj-lead">A few words or a whole story.<br>Whatever comes naturally.</p>
+  <p class="fj-lead">An encounter, an observation, something you learned. No need to be poetic.</p>
+  {% if site.submission_embed_url != '' %}
+  <iframe class="fj-form-embed" src="{{ site.submission_embed_url | escape }}" title="Submit your nature story" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  {% endif %}
+  {% if site.submission_url != '' %}
+  <a class="fj-primary" href="{{ site.submission_url | escape }}">Open the story form ↗</a>
+  <p class="fj-form-note">Submissions are reviewed before publication.</p>
+  {% else %}
+  <p class="fj-form-note">The submission form is coming soon. Thank you for being part of the journal’s beginnings.</p>
+  {% endif %}
+</section>
+
