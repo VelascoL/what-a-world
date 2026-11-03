@@ -7,7 +7,7 @@ layout: default
     <h1>Encounters with<br>the natural world.</h1>
     <p>Awe, fear, sadness, delight—all of it belongs here.</p>
   </div>
-  <div class="fj-art" aria-hidden="true"><img src="{{ '/assets/nature-flyer.jpg' | relative_url }}" alt="" width="853" height="1103"></div>
+  <div class="fj-art" aria-hidden="true"><img src="{{ '/assets/nature-dragon.jpg' | relative_url }}" alt="" width="1448" height="809"></div>
 </section>
 {% assign ordered_stories = site.stories | sort: 'order' %}
 <div class="fj-browsebar">
@@ -23,13 +23,17 @@ layout: default
     <h2><a href="{{ story.url | relative_url }}" data-story-link>{{ story.title | escape }}</a></h2>
     {% if story.sample %}<div class="fj-sample-label">Fictional sample</div>{% endif %}
     <div class="fj-excerpt">{{ story.excerpt }}</div>
+    {% if forloop.first %}
+      {% assign paragraphs = story.content | markdownify | split: '</p>' %}
+      {% if paragraphs.size > 2 %}<div class="fj-extra">{{ paragraphs[1] }}</p></div>{% endif %}
+    {% endif %}
     <a class="fj-read" href="{{ story.url | relative_url }}">Read the story ↗</a>
   </article>
   {% else %}
   <div class="fj-empty">
     <h2>The journal is just beginning.</h2>
     <p>We’re collecting our first encounters with the natural world. There’s room for yours.</p>
-    <a class="fj-read" href="{{ '/share/' | relative_url }}">Share your story ↗</a>
+    <a class="fj-read" href="{{ site.submission_url | escape }}">Share your story ↗</a>
   </div>
   {% endfor %}
 </div>

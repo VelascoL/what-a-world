@@ -4,9 +4,9 @@ url: "https://what-a-world.com"
 baseurl: ""
 
 # Paste your public submission-form link between these quotes.
-submission_url: ""
+submission_url: "https://docs.google.com/forms/d/e/1FAIpQLSfkBR2MgxbkLcH8pyqgG7UPaVnUY40Iuv-_V4wkkB2dzHz64Q/viewform"
 # Optional: a provider-supported iframe embed URL (not every form supports one).
-submission_embed_url: ""
+submission_embed_url: "https://docs.google.com/forms/d/e/1FAIpQLSfkBR2MgxbkLcH8pyqgG7UPaVnUY40Iuv-_V4wkkB2dzHz64Q/viewform?embedded=true"
 
 markdown: kramdown
 permalink: pretty

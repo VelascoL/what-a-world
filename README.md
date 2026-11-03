@@ -63,7 +63,8 @@ your private form account. Add only the approved public version to `_stories`.
 ## How submissions work
 
 GitHub Pages displays the journal. The existing form service collects accounts.
-The Share page links to that form; optionally it can display a supported embed.
+All story-submission links open the configured Google Form directly in the same tab.
+The old Share page remains available at `/share/` for existing bookmarks.
 Submissions do not automatically publish. You review them and add approved
 accounts as Markdown files.
 
@@ -95,10 +96,15 @@ Open the address Jekyll prints, including `/what-a-world/`.
 
 ## Validation status
 
-Configuration and story metadata were parsed locally. The file structure and
-relative paths were checked. A full Jekyll build and browser inspection have
-not been run in this environment. GitHub's initial Pages build is the remaining
-deployment check. This package has not been uploaded or published to GitHub.
+Validated on November 3, 2026 with Jekyll 3.10.0: the site builds successfully,
+and all generated local links and assets resolve. Desktop (1440 px) and mobile
+(390 px) screenshots of the collection, story, and submission pages were reviewed.
+The collection, story, About, and submission pages also passed horizontal-overflow
+checks at 320 px. Random-story navigation was checked in the browser.
+
+Story-submission links were checked in the generated collection, About, and story
+pages: they point directly to Google Forms in the same tab.
+
 
 ## Documentation
 

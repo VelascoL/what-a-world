@@ -19,7 +19,7 @@ layout: default
       {% endif %}
     {% endfor %}
     {% if ordered_stories.size > 1 %}<a class="fj-read" href="{{ next_story.url | relative_url }}">Another encounter →</a>{% endif %}
-    <a class="fj-read" href="{{ '/share/' | relative_url }}">Share a moment of your own ↗</a>
+    <a class="fj-read" href="{{ site.submission_url | escape }}">Share a moment of your own ↗</a>
   </div>
 </article>
 
