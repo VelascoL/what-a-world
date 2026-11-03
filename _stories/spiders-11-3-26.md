@@ -1,7 +1,7 @@
 ---
 title: "Feeling seen"
 contributor: "Luisa Velasco"
-place: "Tuesday nights"
+place: "Tuesday nights on the trail"
 order: 1
 sample: true
 ---
