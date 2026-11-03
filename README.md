@@ -1,9 +1,6 @@
 # What a world, huh?
 
-A field journal for nature stories, prepared for GitHub Pages. The design uses
-the supplied flyer artwork, warm paper, and green type. Readers browse excerpts,
-open individual story pages, or choose a random encounter. There are no feeling
-categories. Each story has its own shareable address.
+A field journal for nature stories.
 
 ## Publish on GitHub
 
