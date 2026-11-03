@@ -1,7 +1,7 @@
 ---
 title: "Feeling seen"
 contributor: "Luisa Velasco"
-place: "Tuesday nights on the trail"
+place: "Austin, TX"
 order: 1
 sample: false
 ---
