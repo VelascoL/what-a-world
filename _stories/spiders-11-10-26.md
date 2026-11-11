@@ -1,7 +1,7 @@
 ---
 title: "Spider Lessons"
 contributor: "Alyssa Walker"
-place: "My kitchen, Flower Mound, TX"
+place: ""
 order: 5
 sample: false
 ---
