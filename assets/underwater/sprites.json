@@ -1,0 +1,77 @@
+{
+  "bottom-fish": {
+    "width": 145,
+    "height": 58,
+    "columns": 2,
+    "rows": 1,
+    "durations": [150, 150]
+  },
+  "deep-fish": {
+    "width": 279,
+    "height": 61,
+    "columns": 1,
+    "rows": 1,
+    "durations": [
+      2600
+    ]
+  },
+  "jellyfish": {
+    "width": 253,
+    "height": 234,
+    "columns": 4,
+    "rows": 1,
+    "durations": [
+      300,
+      300,
+      300,
+      300
+    ]
+  },
+  "moray": {
+    "width": 103,
+    "height": 31,
+    "columns": 1,
+    "rows": 1,
+    "durations": [
+      1500
+    ]
+  },
+  "school": {
+    "width": 176,
+    "height": 105,
+    "columns": 4,
+    "rows": 1,
+    "durations": [
+      300,
+      300,
+      300,
+      300
+    ]
+  },
+  "yellow-fish": {
+    "width": 135,
+    "height": 54,
+    "columns": 1,
+    "rows": 1,
+    "durations": [
+      1500
+    ]
+  },
+  "vent": {
+    "width": 44,
+    "height": 16,
+    "columns": 4,
+    "rows": 3,
+    "durations": [
+      180,
+      180,
+      180,
+      180,
+      180,
+      180,
+      180,
+      180,
+      180
+    ]
+  }
+}
