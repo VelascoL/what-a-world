@@ -14,6 +14,10 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="habitat-backdrop" aria-hidden="true">
+    <div class="habitat-side habitat-left"></div>
+    <div class="habitat-side habitat-right"></div>
+  </div>
   <div class="ocean-backdrop" aria-hidden="true" data-sprite-manifest="{{ '/assets/underwater/sprites.json' | relative_url }}?v={{ site.time | date: '%s' }}">
     <span class="ocean-creature ocean-moray" data-swim="moray" data-side="left"><span class="ocean-sprite" data-sprite="moray"></span></span>
     <span class="ocean-creature ocean-school" data-swim="school" data-side="right"><span class="ocean-sprite" data-sprite="school"></span></span>
@@ -41,11 +45,15 @@
         <select id="scene-select">
           <option value="forest">Forest floor</option>
           <option value="underwater">Underwater</option>
+          <option value="desert">Desert</option>
+          <option value="mountains">Mountains</option>
+          <option value="treetops">Treetops</option>
         </select>
         <button type="button" class="fj-motion-toggle" hidden>Pause movement</button>
       </div>
     </footer>
   </div>
+  <div class="habitat-bottom" aria-hidden="true"></div>
   <div class="ocean-seafloor" aria-hidden="true">
     <div class="ocean-seafloor-art">
       <span class="ocean-sprite ocean-vent" data-sprite="vent"></span>

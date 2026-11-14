@@ -6,6 +6,10 @@
   const backdrop = document.querySelector('[data-sprite-manifest]');
   if (!controls || !select || !motionButton || !backdrop) return;
 
+  const sceneNames = Array.from(select.options, option => option.value);
+  const validScene = scene => sceneNames.includes(scene);
+  const themeColors = { forest:'#fff8e9', underwater:'#3f36e9', desert:'#f4cf79', mountains:'#dce5f3', treetops:'#9dd6ee' };
+
   const readPreference = key => { try { return localStorage.getItem(key); } catch (_) { return null; } };
   const savePreference = (key, value) => { try { localStorage.setItem(key, value); } catch (_) {} };
   const readVisitScene = () => { try { return sessionStorage.getItem('what-a-world.scene'); } catch (_) { return null; } };
@@ -256,11 +260,11 @@
     finally { loading = false; syncMotionButton(); syncAnimation(); }
   }
   function setScene(scene, updateURL = false) {
-    root.dataset.scene = scene === 'underwater' ? 'underwater' : 'forest';
+    root.dataset.scene = validScene(scene) ? scene : 'forest';
     select.value = root.dataset.scene;
     saveVisitScene(select.value);
     const themeColor = document.querySelector('meta[name="theme-color"]');
-    if (themeColor) themeColor.content = select.value === 'underwater' ? '#3f36e9' : '#fff8e9';
+    if (themeColor) themeColor.content = themeColors[select.value] || themeColors.forest;
     if (updateURL) {
       try {
         const url = new URL(window.location.href);
@@ -299,7 +303,7 @@
   window.addEventListener('pageshow', event => {
     const saved = readVisitScene();
     // A restored page should use the choice made on the most recently visited page.
-    if (event.persisted && (saved === 'forest' || saved === 'underwater')) setScene(saved);
+    if (event.persisted && validScene(saved)) setScene(saved);
     else syncAnimation();
   });
   controls.hidden = false;

@@ -93,6 +93,7 @@ Open the address Jekyll prints, including `/what-a-world/`.
 - `assets/site.js`: random-story navigation.
 - `assets/scenes.css`, `assets/scenes.js`: habitat layout and animation controls.
 - `assets/underwater/`: water artwork, transparent sprite sheets, and frame timings.
+- `assets/habitats/`: watercolor side and bottom panels for Desert, Mountains, and Treetops.
 - `index.html`, `about.html`, `share.html`: the main pages.
 - `examples/story-template.md`: a copyable story template, excluded from the site.
 
@@ -101,8 +102,13 @@ Open the address Jekyll prints, including `/what-a-world/`.
 The underwater addition builds with Jekyll 3.10.0. Scene selection, frame playback,
 pause/resume, reduced motion, tab visibility, unavailable storage, and a failed
 animation-metadata request were checked in an isolated JavaScript harness.
-The new layout still needs a visual check in a browser; the earlier screenshot
-checks below apply to the previous journal layout.
+The five-habitat update builds with the same Jekyll version. Random choice,
+visit persistence, direct habitat URLs, all five selector options, Back
+restoration, disabled storage, and motion preferences pass JavaScript checks.
+The three new backgrounds were reviewed in a browser on desktop and in
+390 px and 768 px preview frames, including their footer artwork. No horizontal
+overflow was observed. Habitat persistence across navigation and the underwater
+pause control were also verified in the browser.
 
 Validated on November 3, 2026 with Jekyll 3.10.0: the site builds successfully,
 and all generated local links and assets resolve. Desktop (1440 px) and mobile
@@ -116,10 +122,10 @@ pages: they point directly to Google Forms in the same tab.
 
 ## Choosing a habitat
 
-Use **Your surroundings** in the footer to switch between **Forest floor**
-and **Underwater**. The selector and movement control sit at the bottom of the
-journal in the footer. On a fresh tab visit, either habitat is selected with
-equal probability before the styles load. Session storage keeps it through
+Use **Your surroundings** in the footer to switch between **Forest floor**,
+**Underwater**, **Desert**, **Mountains**, and **Treetops**. The selector and movement
+control sit at the bottom of the journal. On a fresh tab visit, each of the five
+habitats has a 20% chance of being selected before the styles load. Session storage keeps it through
 story navigation and refreshes; a manual selection replaces it for that visit.
 Closing the tab ends the visit (a browser restoring a saved session may restore
 its choice). Previous permanent habitat preferences are no longer used; the
@@ -130,6 +136,18 @@ For a direct underwater preview, append `?scene=underwater` to any page URL,
 for example `http://localhost:4000/?scene=underwater` when previewing at the root.
 An explicit habitat URL overrides the random choice and becomes the choice for
 that tab visit. Use the plain site URL to try randomized selection.
+
+The three watercolor habitats use the supplied `desert.png`, `moutain.png`, and
+`treetop.png` drawings. Their left, right, and lower portions are exported as
+WebP assets in `assets/habitats/`; their drawn journal placeholders are omitted.
+Fixed side panels frame the real journal throughout a long story. A separate
+bottom panel shows the cacti, mountain lake, or lower branches beneath the footer.
+Images retain their proportions and crop to fit the available space. On narrow
+screens the journal gets the reading space, with slim illustrated margins and
+the bottom scene still visible. These three habitats are static; movement and
+pause controls apply only to Underwater. Direct links support `?scene=desert`,
+`?scene=mountains`, and `?scene=treetops`.
+
 The underwater animals follow the drawn routes across the full background,
 passing behind the journal. The vent appears below the journal
 at the end of the page. On narrow screens, the margins shrink to preserve reading
