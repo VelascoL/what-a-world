@@ -6,11 +6,23 @@
   <title>Feeling seen · What a world, huh?</title>
   <meta name="description" content="A shared field journal of encounters with the natural world.">
   <meta name="theme-color" content="#fff8e9">
+  <script src="/assets/scene-init.js?v=1794536773"></script>
   <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/scenes.css?v=1794536773">
   <script src="/assets/site.js" defer></script>
+  <script src="/assets/scenes.js?v=1794536773" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ocean-backdrop" aria-hidden="true" data-sprite-manifest="/assets/underwater/sprites.json?v=1794536773">
+    <span class="ocean-creature ocean-moray" data-swim="moray" data-side="left"><span class="ocean-sprite" data-sprite="moray"></span></span>
+    <span class="ocean-creature ocean-school" data-swim="school" data-side="right"><span class="ocean-sprite" data-sprite="school"></span></span>
+    <span class="ocean-creature ocean-jellyfish" data-swim="jellyfish" data-side="left"><span class="ocean-sprite" data-sprite="jellyfish"></span></span>
+    <span class="ocean-creature ocean-jellyfish ocean-jellyfish-medium" data-swim="jellyfish-medium" data-side="right" data-swim-offset="18"><span class="ocean-sprite" data-sprite="jellyfish" data-start-frame="1"></span></span>
+    <span class="ocean-creature ocean-jellyfish ocean-jellyfish-small" data-swim="jellyfish-small" data-side="left" data-swim-offset="37"><span class="ocean-sprite" data-sprite="jellyfish" data-start-frame="2"></span></span>
+    <span class="ocean-creature ocean-yellow-fish" data-swim="yellow-fish" data-side="right"><span class="ocean-sprite" data-sprite="yellow-fish"></span></span>
+    <span class="ocean-creature ocean-deep-fish" data-swim="deep-fish" data-side="right"><span class="ocean-sprite" data-sprite="deep-fish"></span></span>
+  </div>
   <div id="field-journal">
     <header class="fj-top">
       <a class="fj-brand" href="/">What a world,<br>huh?</a>
@@ -47,7 +59,21 @@
     <footer class="fj-footer">
       <span>A shared field journal.</span>
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSfkBR2MgxbkLcH8pyqgG7UPaVnUY40Iuv-_V4wkkB2dzHz64Q/viewform">There’s room for your story here.</a>
+      <div class="fj-scene-controls" hidden>
+        <label for="scene-select">Your surroundings</label>
+        <select id="scene-select">
+          <option value="forest">Forest floor</option>
+          <option value="underwater">Underwater</option>
+        </select>
+        <button type="button" class="fj-motion-toggle" hidden>Pause movement</button>
+      </div>
     </footer>
+  </div>
+  <div class="ocean-seafloor" aria-hidden="true">
+    <div class="ocean-seafloor-art">
+      <span class="ocean-sprite ocean-vent" data-sprite="vent"></span>
+    </div>
+    <span class="ocean-creature ocean-bottom-fish" data-swim="bottom-fish"><span class="ocean-sprite" data-sprite="bottom-fish"></span></span>
   </div>
 </body>
 </html>
