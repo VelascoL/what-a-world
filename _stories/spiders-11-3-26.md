@@ -3,6 +3,7 @@ title: "Feeling seen"
 contributor: "Luisa Velasco"
 place: "Austin, TX"
 order: 1
+published_on: 2026-11-03
 sample: false
 ---
 

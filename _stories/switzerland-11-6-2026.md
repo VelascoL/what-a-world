@@ -3,6 +3,7 @@ title: "Bong Time"
 contributor: "John"
 place: "Switzerland"
 order: 3
+published_on: 2026-11-06
 sample: false
 ---
 

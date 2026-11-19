@@ -137,3 +137,8 @@ body {
     background-position: 66.666667% top;
   }
 }
+
+/* Collection ordering; only the leading story gets an extended excerpt. */
+#field-journal .fj-story-order{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font:14px/1.5 'DM Sans',sans-serif}
+#field-journal .fj-story-order select{min-height:44px;max-width:100%;padding:6px 10px;background:var(--paper);color:var(--ink);border:1px solid var(--rule);border-radius:2px}
+#field-journal .fj-entry:not(:first-child) .fj-extra{display:none}

@@ -3,6 +3,7 @@ title: "Spider Lessons"
 contributor: "Alyssa Walker"
 place: ""
 order: 5
+published_on: 2026-11-10
 sample: false
 ---
 

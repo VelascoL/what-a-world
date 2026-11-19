@@ -6,15 +6,19 @@
   <title>What a world, huh?</title>
   <meta name="description" content="A shared field journal of encounters with the natural world.">
   <meta name="theme-color" content="#fff8e9">
-  <script src="/assets/scene-init.js?v=1794536773"></script>
+  <script src="/assets/scene-init.js?v=1795048756"></script>
   <link rel="stylesheet" href="/assets/site.css">
-  <link rel="stylesheet" href="/assets/scenes.css?v=1794536773">
+  <link rel="stylesheet" href="/assets/scenes.css?v=1795048756">
   <script src="/assets/site.js" defer></script>
-  <script src="/assets/scenes.js?v=1794536773" defer></script>
+  <script src="/assets/scenes.js?v=1795048756" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="ocean-backdrop" aria-hidden="true" data-sprite-manifest="/assets/underwater/sprites.json?v=1794536773">
+  <div class="habitat-backdrop" aria-hidden="true">
+    <div class="habitat-side habitat-left"></div>
+    <div class="habitat-side habitat-right"></div>
+  </div>
+  <div class="ocean-backdrop" aria-hidden="true" data-sprite-manifest="/assets/underwater/sprites.json?v=1795048756">
     <span class="ocean-creature ocean-moray" data-swim="moray" data-side="left"><span class="ocean-sprite" data-sprite="moray"></span></span>
     <span class="ocean-creature ocean-school" data-swim="school" data-side="right"><span class="ocean-sprite" data-sprite="school"></span></span>
     <span class="ocean-creature ocean-jellyfish" data-swim="jellyfish" data-side="left"><span class="ocean-sprite" data-sprite="jellyfish"></span></span>
@@ -43,79 +47,125 @@
 
 <div class="fj-browsebar">
   <span class="fj-kicker">From the collection</span>
+  
+  <label class="fj-story-order" hidden>
+    Sort
+    <select data-story-order aria-controls="story-collection">
+      <option value="random">Random</option>
+      <option value="newest">Newest to oldest</option>
+    </select>
+  </label>
+  
   <button class="fj-random" type="button" data-random hidden>Take me somewhere ↗</button>
 </div>
 
 
-<div class="fj-stories">
+<div class="fj-stories" id="story-collection">
   
-  <article class="fj-entry">
-    <div class="fj-meta">Austin, TX</div>
-    <h2><a href="/stories/spiders-11-3-26/" data-story-link>Feeling seen</a></h2>
+  <article class="fj-entry" data-published-on="2026-11-18">
+    <div class="fj-meta"></div>
+    <h2><a href="/stories/sunset-11-18-2026/" data-story-link>Look up</a></h2>
     
-    <div class="fj-excerpt"><p>12 weeks out from a marathon, we would meet at 7 p.m. every Tuesday night at the trailhead for 9-11 miles of interval speed work. This trail stretched a good 10 miles uninterrupted by road crossings and enclosed by trees and a meadow–one of the nicest places to run in the city.</p>
+    <div class="fj-excerpt"><p>I was in a toxic relationship for almost 3 years. It got to the point where I was obsessed, entirely dependent, and my world and everything I thought of or acted on was for him. When he broke up with me, I made a plan to attempt suicide.</p>
 
 </div>
-    
       
       <div class="fj-extra">
 
-<p>In August, we could finish by the edge of dusk, but as the days grew shorter, more and more of our run was in the dark. Equipped now with headlamps, switched on about halfway through, we noticed that the borders of the trail glittered, reflecting our light like dew on grass. Except it was September in Texas and the grass had been baking in the sun all day.</p></div>
-    
-    <a class="fj-read" href="/stories/spiders-11-3-26/">Read the story ↗</a>
+<p>The first weeks were awful; I couldn’t eat or sleep or even move without it costing all of my energy. My mom started taking me on walks once I could stand it more or less. The first time she did, my plan to commit would’ve been right after. She took me to our local park around golden hour. After spending weeks alone in my room, after my only light being from my phone, after losing my shit, I looked up. I looked up at the sunset, and all the gorgeous colors in the sky. I looked at the flowers, and how the light bouncing off them made them glow a golden hue. I looked at the river, and how the highlights on the surface appeared as though they were dancing to the chirping of the birds. I reached down to touch it, and the cold sent shivers all over my body. It was the first time I felt anything other than numbness, exhaustion, depression, or rage. It felt like breathing.</p></div>
+    <a class="fj-read" href="/stories/sunset-11-18-2026/">Read the story ↗</a>
   </article>
   
-  <article class="fj-entry">
-    <div class="fj-meta">My kitchen, Flower Mound, TX</div>
-    <h2><a href="/stories/maggots-11-05-2026/" data-story-link>eughh</a></h2>
+  <article class="fj-entry" data-published-on="2026-11-18">
+    <div class="fj-meta">Jenny Lake, Teton National Park</div>
+    <h2><a href="/stories/trees-11-18-2026/" data-story-link>Wisdom of Trees</a></h2>
     
-    <div class="fj-excerpt"><p>I thought rice had spilled on my kitchen floor. I bent down to pick it up and realized it was moving…. And there were many wiggling grains inching across my tiles. I’ll admit I squealed in disgust. I couldn’t fathom where they came from. I began to squish them in paper towel and can still feel them bursting between my fingers 15 years later and still shiver with the same repulsion. It wasn’t until the exterminator came that I learned that a fly had laid eggs in my trash can and the little, white, wiggle grains were maggots.</p>
-</div>
-    
-    <a class="fj-read" href="/stories/maggots-11-05-2026/">Read the story ↗</a>
-  </article>
-  
-  <article class="fj-entry">
-    <div class="fj-meta">Switzerland</div>
-    <h2><a href="/stories/switzerland-11-6-2026/" data-story-link>Bong Time</a></h2>
-    
-    <div class="fj-excerpt"><p>It all started when Bonnie and I were driving around Switzerland. She was amazed and delighted with the agrarian wonderland before us, full of verdant valleys, blue lakes and towering mountains. One thing that she found charming was the constant chorus of cow bells as the cows moved around the pastures.</p>
+    <div class="fj-excerpt"><p>I’ve always been fascinated by trees. It was two summers ago, I was on a road trip with my best friend. I was sitting on a rock, looking, listening. All I could hear was the wind in the branches. At that moment, I was struck with the realization of how wonderful trees are, and how <em>wise</em>. They stood there unmoving, interacting with the natural world around it in a way that felt admirable. Not overstepping, not overcompensating, but doing their due diligence. I thought about the fact that to enjoy their presence is the exchange of oxygen and carbon dioxide, a subconscious processes that we don’t even think about, and in it the trees engage with us. I was also struck by their independence and at the same time, their community. They do not rush, they do not have a human timeline. We don’t judge them for how slow they grow. Each season can bring leaves falling, leaving branches bare. There are seasons of blooming and seasons of rest, seasons recovering and seasons of bearing fruit. But it’s not a flaw, it is how they were made to function. Since then trees have been a constant reminder that we do not have to rush, we do not have to be anything other than what we are.</p>
 
 </div>
-    
-    <a class="fj-read" href="/stories/switzerland-11-6-2026/">Read the story ↗</a>
-  </article>
-  
-  <article class="fj-entry">
-    <div class="fj-meta">Austin, TX</div>
-    <h2><a href="/stories/winter-11-10-26/" data-story-link>One Winter Day</a></h2>
-    
-    <div class="fj-excerpt"><p>One winter day a few years ago, it rained very hard for very long. That night, the temperature dropped to around 30 degrees, uncommonly cold for Austin. In the morning, the entire city was coated in a thin layer of ice. Every last car, road sign, hand rail, tree, and blade of grass was glistening, as though glazed by a meticulous potter. Little icicles clung to every overhang.</p>
+      
+      <div class="fj-extra">
 
-</div>
-    
-    <a class="fj-read" href="/stories/winter-11-10-26/">Read the story ↗</a>
+<p>I have also included one of the many poems I have written about trees since then:</p></div>
+    <a class="fj-read" href="/stories/trees-11-18-2026/">Read the story ↗</a>
   </article>
   
-  <article class="fj-entry">
-    <div class="fj-meta"></div>
-    <h2><a href="/stories/spiders-11-10-26/" data-story-link>Spider Lessons</a></h2>
-    
-    <div class="fj-excerpt"><p>The other morning, I was with one of my students, and we saw a spider crawling across the floor of the playroom. It was not a big spider, but it wasn’t unnoticeable either. I started to worry that my student would try to kill it. I picked it up and held it in my hand. My student got real close and asked what I was doing. I knelt down and showed her the little creature. At the same time, I explained that it was valuable to this world and needed to be protected. We then went over to the window and put it out of harms way. It was a moment that I think about often because even “scary” animals and insects deserve to live.</p>
-</div>
-    
-    <a class="fj-read" href="/stories/spiders-11-10-26/">Read the story ↗</a>
-  </article>
-  
-  <article class="fj-entry">
+  <article class="fj-entry" data-published-on="2026-11-11">
     <div class="fj-meta">Cabin in the mountains</div>
     <h2><a href="/stories/cabin-11-11-2026/" data-story-link>New Year</a></h2>
     
     <div class="fj-excerpt"><p>My friend has a cabin the mountains.  My friend group has gotten in the habit of going there every year on New Years Day for a new years “refresh”.  The cabin is at the top of a hill in a middle-of-nowhere town and there is no cell service.  Only cars with 4 wheel drive can make it up the driveway.</p>
 
 </div>
-    
+      
+      <div class="fj-extra">
+
+<p>In 2023 when we went, the weather was a perfect Fall day.  This was extremely unusual for the region that time of year.  There were leaves on the ground that we would rake up and jump into, we were all comfortable wearing our sweaters, and we would walk out to the quarry and throw rocks.  The only car that year that made it to the top one the hill was a bright red Toyota Tacoma.  We all joked that year that it felt like we were in a Toyota commercial.</p></div>
     <a class="fj-read" href="/stories/cabin-11-11-2026/">Read the story ↗</a>
+  </article>
+  
+  <article class="fj-entry" data-published-on="2026-11-10">
+    <div class="fj-meta">Austin, TX</div>
+    <h2><a href="/stories/winter-11-10-26/" data-story-link>One Winter Day</a></h2>
+    
+    <div class="fj-excerpt"><p>One winter day a few years ago, it rained very hard for very long. That night, the temperature dropped to around 30 degrees, uncommonly cold for Austin. In the morning, the entire city was coated in a thin layer of ice. Every last car, road sign, hand rail, tree, and blade of grass was glistening, as though glazed by a meticulous potter. Little icicles clung to every overhang.</p>
+
+</div>
+      
+      <div class="fj-extra">
+
+<p>My roommates and I were well acquainted with snowy and icy weather, but we were nevertheless awestruck by this winter wonderland that had replaced our familiar neighborhood. The fact this was happening in the hot state of Texas made it special and unique.</p></div>
+    <a class="fj-read" href="/stories/winter-11-10-26/">Read the story ↗</a>
+  </article>
+  
+  <article class="fj-entry" data-published-on="2026-11-10">
+    <div class="fj-meta"></div>
+    <h2><a href="/stories/spiders-11-10-26/" data-story-link>Spider Lessons</a></h2>
+    
+    <div class="fj-excerpt"><p>The other morning, I was with one of my students, and we saw a spider crawling across the floor of the playroom. It was not a big spider, but it wasn’t unnoticeable either. I started to worry that my student would try to kill it. I picked it up and held it in my hand. My student got real close and asked what I was doing. I knelt down and showed her the little creature. At the same time, I explained that it was valuable to this world and needed to be protected. We then went over to the window and put it out of harms way. It was a moment that I think about often because even “scary” animals and insects deserve to live.</p>
+</div>
+      
+      
+    <a class="fj-read" href="/stories/spiders-11-10-26/">Read the story ↗</a>
+  </article>
+  
+  <article class="fj-entry" data-published-on="2026-11-06">
+    <div class="fj-meta">Switzerland</div>
+    <h2><a href="/stories/switzerland-11-6-2026/" data-story-link>Bong Time</a></h2>
+    
+    <div class="fj-excerpt"><p>It all started when Bonnie and I were driving around Switzerland. She was amazed and delighted with the agrarian wonderland before us, full of verdant valleys, blue lakes and towering mountains. One thing that she found charming was the constant chorus of cow bells as the cows moved around the pastures.</p>
+
+</div>
+      
+      <div class="fj-extra">
+
+<p>As we were driving along she suddenly said “stop right here”. I did, as it was a country road with no traffic and stone walls on each side. Bonnie climbed over the wall out of my view until I got out of the car and found her kneeling in front of a massive bull complete with his bell, taking his picture. I thought kneeling in front of two or three tons of beef on the hoof was a little reckless and got her back over the wall. Later that day I bought her a cow bell as a momento which has hung ever since over our bar.</p></div>
+    <a class="fj-read" href="/stories/switzerland-11-6-2026/">Read the story ↗</a>
+  </article>
+  
+  <article class="fj-entry" data-published-on="2026-11-05">
+    <div class="fj-meta">My kitchen, Flower Mound, TX</div>
+    <h2><a href="/stories/maggots-11-05-2026/" data-story-link>eughh</a></h2>
+    
+    <div class="fj-excerpt"><p>I thought rice had spilled on my kitchen floor. I bent down to pick it up and realized it was moving…. And there were many wiggling grains inching across my tiles. I’ll admit I squealed in disgust. I couldn’t fathom where they came from. I began to squish them in paper towel and can still feel them bursting between my fingers 15 years later and still shiver with the same repulsion. It wasn’t until the exterminator came that I learned that a fly had laid eggs in my trash can and the little, white, wiggle grains were maggots.</p>
+</div>
+      
+      
+    <a class="fj-read" href="/stories/maggots-11-05-2026/">Read the story ↗</a>
+  </article>
+  
+  <article class="fj-entry" data-published-on="2026-11-03">
+    <div class="fj-meta">Austin, TX</div>
+    <h2><a href="/stories/spiders-11-3-26/" data-story-link>Feeling seen</a></h2>
+    
+    <div class="fj-excerpt"><p>12 weeks out from a marathon, we would meet at 7 p.m. every Tuesday night at the trailhead for 9-11 miles of interval speed work. This trail stretched a good 10 miles uninterrupted by road crossings and enclosed by trees and a meadow–one of the nicest places to run in the city.</p>
+
+</div>
+      
+      <div class="fj-extra">
+
+<p>In August, we could finish by the edge of dusk, but as the days grew shorter, more and more of our run was in the dark. Equipped now with headlamps, switched on about halfway through, we noticed that the borders of the trail glittered, reflecting our light like dew on grass. Except it was September in Texas and the grass had been baking in the sun all day.</p></div>
+    <a class="fj-read" href="/stories/spiders-11-3-26/">Read the story ↗</a>
   </article>
   
 </div>
@@ -129,11 +179,15 @@
         <select id="scene-select">
           <option value="forest">Forest floor</option>
           <option value="underwater">Underwater</option>
+          <option value="desert">Desert</option>
+          <option value="mountains">Mountains</option>
+          <option value="treetops">Treetops</option>
         </select>
         <button type="button" class="fj-motion-toggle" hidden>Pause movement</button>
       </div>
     </footer>
   </div>
+  <div class="habitat-bottom" aria-hidden="true"></div>
   <div class="ocean-seafloor" aria-hidden="true">
     <div class="ocean-seafloor-art">
       <span class="ocean-sprite ocean-vent" data-sprite="vent"></span>

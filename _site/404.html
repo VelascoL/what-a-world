@@ -6,15 +6,19 @@
   <title>Page not found · What a world, huh?</title>
   <meta name="description" content="A shared field journal of encounters with the natural world.">
   <meta name="theme-color" content="#fff8e9">
-  <script src="/assets/scene-init.js?v=1794536773"></script>
+  <script src="/assets/scene-init.js?v=1795048756"></script>
   <link rel="stylesheet" href="/assets/site.css">
-  <link rel="stylesheet" href="/assets/scenes.css?v=1794536773">
+  <link rel="stylesheet" href="/assets/scenes.css?v=1795048756">
   <script src="/assets/site.js" defer></script>
-  <script src="/assets/scenes.js?v=1794536773" defer></script>
+  <script src="/assets/scenes.js?v=1795048756" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="ocean-backdrop" aria-hidden="true" data-sprite-manifest="/assets/underwater/sprites.json?v=1794536773">
+  <div class="habitat-backdrop" aria-hidden="true">
+    <div class="habitat-side habitat-left"></div>
+    <div class="habitat-side habitat-right"></div>
+  </div>
+  <div class="ocean-backdrop" aria-hidden="true" data-sprite-manifest="/assets/underwater/sprites.json?v=1795048756">
     <span class="ocean-creature ocean-moray" data-swim="moray" data-side="left"><span class="ocean-sprite" data-sprite="moray"></span></span>
     <span class="ocean-creature ocean-school" data-swim="school" data-side="right"><span class="ocean-sprite" data-sprite="school"></span></span>
     <span class="ocean-creature ocean-jellyfish" data-swim="jellyfish" data-side="left"><span class="ocean-sprite" data-sprite="jellyfish"></span></span>
@@ -48,11 +52,15 @@
         <select id="scene-select">
           <option value="forest">Forest floor</option>
           <option value="underwater">Underwater</option>
+          <option value="desert">Desert</option>
+          <option value="mountains">Mountains</option>
+          <option value="treetops">Treetops</option>
         </select>
         <button type="button" class="fj-motion-toggle" hidden>Pause movement</button>
       </div>
     </footer>
   </div>
+  <div class="habitat-bottom" aria-hidden="true"></div>
   <div class="ocean-seafloor" aria-hidden="true">
     <div class="ocean-seafloor-art">
       <span class="ocean-sprite ocean-vent" data-sprite="vent"></span>
